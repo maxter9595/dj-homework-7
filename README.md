@@ -141,20 +141,6 @@ Content-Type: application/json
 Authorization: Token 2c071f6b49703258910158cbe0699a8c2bdf4acf
 ```
 
-- Обновление объявления:
-```http
-# -- админы могут менять любые объявления
-# -- пользователи могут менять только свое объявление
-# -- /int/ - id объявления
-PATCH  {{baseUrl}}/advertisements/1/
-Content-Type: application/json
-Authorization: Token 2c071f6b49703258910158cbe0699a8c2bdf4acf
-
-{
-  "status": "OPEN"
-}
-```
-
 
 - Добавление объявления в избранные:
 ```http
