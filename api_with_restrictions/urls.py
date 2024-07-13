@@ -24,14 +24,16 @@ from advertisements.views import AdvertisementViewSet
 Настройка роутера
 """
 router = DefaultRouter()
+
 router.register(
     prefix='advertisements',
     viewset=AdvertisementViewSet,
-    basename='advertisements'
+    basename='advertisements',
 )
 
 urlpatterns = [
     path('api/', include(router.urls)),
     path('admin/', admin.site.urls),
 ]
+
 urlpatterns += router.urls
